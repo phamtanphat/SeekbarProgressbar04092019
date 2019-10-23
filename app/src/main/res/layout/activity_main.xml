@@ -8,14 +8,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <SeekBar
-        android:id="@+id/seekbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <SeekBar
-        android:layout_marginTop="30dp"
-        android:id="@+id/seekbar1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+
+
 
 </LinearLayout>
