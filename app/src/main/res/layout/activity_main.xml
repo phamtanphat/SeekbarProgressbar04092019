@@ -25,10 +25,61 @@
             android:layout_height="150dp"/>
     </LinearLayout>
     <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
         android:layout_weight="6"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:buttonTint="#ffff"
+                android:id="@+id/checkboxOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <SeekBar
+                android:thumb="@drawable/ic_oc"
+                android:progressTint="#ffff"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/checkboxOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:buttonTint="#ffff"
+                android:id="@+id/checkboxTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <SeekBar
+                android:thumb="@drawable/ic_co"
+                android:progressTint="#ffff"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/checkboxTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:buttonTint="#ffff"
+                android:id="@+id/checkboxThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <SeekBar
+                android:thumb="@drawable/ic_vit"
+                android:progressTint="#ffff"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/checkboxThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
     </LinearLayout>
 
 
