@@ -42,7 +42,7 @@
             <SeekBar
                 android:id="@+id/seekbarOne"
                 android:thumb="@drawable/ic_oc"
-                android:progressTint="#ffff"
+                android:progressTint="@android:color/transparent"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/checkboxOne"
                 android:layout_width="match_parent"
@@ -53,7 +53,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <CheckBox
-
                 android:buttonTint="#ffff"
                 android:id="@+id/checkboxTwo"
                 android:layout_width="wrap_content"
@@ -61,7 +60,7 @@
             <SeekBar
                 android:id="@+id/seekbarTwo"
                 android:thumb="@drawable/ic_co"
-                android:progressTint="#ffff"
+                android:progressTint="@android:color/transparent"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/checkboxTwo"
                 android:layout_width="match_parent"
@@ -79,7 +78,7 @@
             <SeekBar
                 android:id="@+id/seekbarThree"
                 android:thumb="@drawable/ic_vit"
-                android:progressTint="#ffff"
+                android:progressTint="@android:color/transparent"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/checkboxThree"
                 android:layout_width="match_parent"

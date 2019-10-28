@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         eventClick();
     }
 
+
     private void singleCheckedCheckbox() {
         cbOne.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
