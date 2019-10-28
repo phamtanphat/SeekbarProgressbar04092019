@@ -16,7 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <ImageButton
-
+            android:id="@+id/imagebuttonStart"
+            android:foreground="?selectableItemBackground"
             android:background="@android:color/transparent"
             android:layout_gravity="center"
             android:scaleType="fitXY"
@@ -39,6 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <SeekBar
+                android:id="@+id/seekbarOne"
                 android:thumb="@drawable/ic_oc"
                 android:progressTint="#ffff"
                 android:layout_centerVertical="true"
@@ -51,11 +53,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <CheckBox
+
                 android:buttonTint="#ffff"
                 android:id="@+id/checkboxTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <SeekBar
+                android:id="@+id/seekbarTwo"
                 android:thumb="@drawable/ic_co"
                 android:progressTint="#ffff"
                 android:layout_centerVertical="true"
@@ -73,6 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <SeekBar
+                android:id="@+id/seekbarThree"
                 android:thumb="@drawable/ic_vit"
                 android:progressTint="#ffff"
                 android:layout_centerVertical="true"
