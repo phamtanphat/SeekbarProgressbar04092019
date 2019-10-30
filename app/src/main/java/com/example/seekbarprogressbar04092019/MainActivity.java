@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
@@ -85,17 +86,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void randomSeekbar() {
-
-        CountDownTimer countDownTimer = new CountDownTimer(100000, 1000) {
+        setenable(false);
+        final CountDownTimer countDownTimer = new CountDownTimer(100000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                randomskOne = random.nextInt(15);
-                randomskTwo = random.nextInt(15);
-                randomskThree = random.nextInt(15);
+                if (skOne.getProgress() >= 100 ){
+                    setenable(true);
+                    Toast.makeText(MainActivity.this, "Con ốc về nhất", Toast.LENGTH_SHORT).show();
+                    reset();
+                    this.cancel();
+                }else if(skTwo.getProgress() >= 100){
+                    setenable(true);
+                    Toast.makeText(MainActivity.this, "Con cò về nhất", Toast.LENGTH_SHORT).show();
+                    reset();
+                    this.cancel();
+                }else if(skThree.getProgress() >= 100){
+                    setenable(true);
+                    Toast.makeText(MainActivity.this, "Con vịt về nhất", Toast.LENGTH_SHORT).show();
+                    reset();
+                    this.cancel();
+                }else{
+                    randomskOne = random.nextInt(10);
+                    randomskTwo = random.nextInt(10);
+                    randomskThree = random.nextInt(10);
 
-                skOne.setProgress(skOne.getProgress() + randomskOne);
-                skTwo.setProgress(skTwo.getProgress() + randomskTwo);
-                skThree.setProgress(skThree.getProgress() + randomskThree);
+                    skOne.setProgress(skOne.getProgress() + randomskOne);
+                    skTwo.setProgress(skTwo.getProgress() + randomskTwo);
+                    skThree.setProgress(skThree.getProgress() + randomskThree);
+                }
             }
 
             @Override
@@ -104,9 +122,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         countDownTimer.start();
-
     }
-
 
     private void init() {
         imgStart = findViewById(R.id.imagebuttonStart);
@@ -116,5 +132,25 @@ public class MainActivity extends AppCompatActivity {
         skOne = findViewById(R.id.seekbarOne);
         skTwo = findViewById(R.id.seekbarTwo);
         skThree = findViewById(R.id.seekbarThree);
+    }
+    private void setenable(boolean enable){
+        cbOne.setEnabled(enable);
+        cbTwo.setEnabled(enable);
+        cbThree.setEnabled(enable);
+        imgStart.setEnabled(enable);
+    }
+    private void reset(){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                cbOne.setChecked(false);
+                cbTwo.setChecked(false);
+                cbThree.setChecked(false);
+                skOne.setProgress(0);
+                skTwo.setProgress(0);
+                skThree.setProgress(0);
+            }
+        },1000);
+
     }
 }
